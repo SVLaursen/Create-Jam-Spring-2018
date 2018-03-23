@@ -5,18 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class RoomManager : MonoBehaviour {
 
-    public static RoomManager instance;
+    public Rooms[] rooms;
 
-    public string[] rooms;
-
-	private void Awake()
+	private void Update()
 	{
-        if (instance != null){
-            Destroy(gameObject);
-        }
-        else{
-            instance = this;
-            DontDestroyOnLoad(gameObject);
+        for (int i = 0; i < rooms.Length; i++)
+        {
+            Debug.Log(rooms[i].name);
+            Debug.Log(rooms[i].isDead);
+            Debug.Log(rooms[i].roomName);
         }
 	}
+
+
+
+	[System.Serializable]
+    public class Rooms{
+        public string name;
+        public bool isDead;
+        public string roomName;
+    }
 }

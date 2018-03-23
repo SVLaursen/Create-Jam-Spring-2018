@@ -321,9 +321,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Day System\DaySystem.cs" />
-    <Compile Include="Assets\Scripts\Dialogue\DialogueLibrary.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\Dialogue.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueSystem.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
     <Compile Include="Assets\Scripts\Game Manager\EndingManager.cs" />
     <Compile Include="Assets\Scripts\Game Manager\Fade.cs" />
     <Compile Include="Assets\Scripts\Game Manager\GameManager.cs" />

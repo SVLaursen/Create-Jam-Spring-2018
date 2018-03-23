@@ -141,18 +141,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rooms:
-  - MainMenu
-  - Bellboy
-  - Choose
-  - Pensworth
-  - Fred
-  - George
-  - Blart
-  - Goodwill
-  - Lecter
-  - Mathieus
-  - Richard
-  - William
+  - name: Lady Pensworth
+    isDead: 0
+    roomName: Pensworth
+  - name: Fred
+    isDead: 0
+    roomName: Fred
+  - name: George Foreman
+    isDead: 0
+    roomName: George
+  - name: Farther Mathieus
+    isDead: 0
+    roomName: Mathieus
+  - name: Lady Goodwill
+    isDead: 0
+    roomName: Goodwill
+  - name: Sheriff Blart
+    isDead: 0
+    roomName: Blart
+  - name: Jack Lecter
+    isDead: 0
+    roomName: Lecter
+  - name: Penelope
+    isDead: 0
+    roomName: Penelope
+  - name: Richard
+    isDead: 0
+    roomName: Richard
+  - name: William Griffin
+    isDead: 0
+    roomName: William
 --- !u!4 &1112466032
 Transform:
   m_ObjectHideFlags: 0
