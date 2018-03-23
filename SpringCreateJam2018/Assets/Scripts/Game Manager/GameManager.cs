@@ -4,12 +4,28 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
+    RoomManager roomManager;
+    Fade fade;
+    EndingManager endingManager;
+
+    public static GameManager instance;
+
+	private void Awake()
+	{
+        if(instance != null){
+            Destroy(gameObject);
+        }
+        else{
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+
+            roomManager = GetComponent<RoomManager>();
+            fade = GetComponent<Fade>();
+            endingManager = GetComponent<EndingManager>();
+
+        }
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		
 	}

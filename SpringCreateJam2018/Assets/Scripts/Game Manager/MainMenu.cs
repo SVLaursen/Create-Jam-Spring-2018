@@ -1,16 +1,39 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour {
 
-	// Use this for initialization
+    private Fade fade;
+
+    public Canvas mainCanvas;
+    public Canvas tutorialCanvas;
+
 	void Start () {
-		
+        fade = GetComponent<Fade>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+    public void PlayGame(){
+        fade.FadeTo("Bellboy");
+    }
+
+    public void HowTo(){
+        if(mainCanvas.enabled){
+            tutorialCanvas.enabled = true;
+            mainCanvas.enabled = false;
+        }
+        else{
+            tutorialCanvas.enabled = false;
+            mainCanvas.enabled = true;
+        }
+    }
+
+	public void QuitGame()
+	{
+        Application.Quit();
 	}
+
+
 }
