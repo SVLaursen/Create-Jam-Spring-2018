@@ -5,17 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class RoomManager : MonoBehaviour {
 
-    private SceneManager sceneManager = new SceneManager();
+    public static RoomManager instance;
 
-    public Scene[] rooms = new Scene[12];
+    public string[] rooms;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+	private void Awake()
+	{
+        if (instance != null){
+            Destroy(gameObject);
+        }
+        else{
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
 	}
 }

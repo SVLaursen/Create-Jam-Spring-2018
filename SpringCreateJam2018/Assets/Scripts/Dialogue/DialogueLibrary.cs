@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class DialogueLibrary : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
+    public string[] dialog;
+
+    private bool[] spoken;
+
+    private void Awake()
+    {
+        spoken = new bool[dialog.Length];
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+	public string ChooseLine(int diaChoice){
+        if(spoken[diaChoice]){
+            spoken[diaChoice] = false;
+            return dialog[diaChoice];
+        }
+        else{
+            print("This has already been asked");
+            return null;
+        }
+    }
 }
