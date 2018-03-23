@@ -2,22 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class RoomManager : MonoBehaviour {
 
+    /*
+     *  Missing function that implements the buttons to the panel
+     *  in a grid formation.
+     */
+
     public Rooms[] rooms;
+
+    private bool lobbyRoom;
 
 	private void Update()
 	{
-        for (int i = 0; i < rooms.Length; i++)
-        {
-            Debug.Log(rooms[i].name);
-            Debug.Log(rooms[i].isDead);
-            Debug.Log(rooms[i].roomName);
-        }
+        CheckArea();
 	}
 
-
+    private void CheckArea(){
+        if (SceneManager.GetActiveScene().name == "Bellboy")
+        {
+            lobbyRoom = true;
+        }
+        else
+        {
+            lobbyRoom = false;
+        }
+    }
 
 	[System.Serializable]
     public class Rooms{
