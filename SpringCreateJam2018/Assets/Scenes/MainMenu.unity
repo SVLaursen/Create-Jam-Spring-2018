@@ -273,6 +273,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114272154057250960, guid: c12213bd7af1d453fa1562dd374ab53c,
+        type: 2}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1842278111}
+    - target: {fileID: 114272154057250960, guid: c12213bd7af1d453fa1562dd374ab53c,
+        type: 2}
+      propertyPath: musicManager
+      value: 
+      objectReference: {fileID: 1842278110}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c12213bd7af1d453fa1562dd374ab53c, type: 2}
   m_IsPrefabParent: 0
@@ -1185,8 +1195,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c3bd03cd2d14494980be55ef61ac38e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainTheme: {fileID: 0}
-  menuTheme: {fileID: 0}
+  mainTheme: {fileID: 8300000, guid: 461731a887c35418c8d46dc8fab206f3, type: 3}
+  menuTheme: {fileID: 8300000, guid: 461731a887c35418c8d46dc8fab206f3, type: 3}
 --- !u!114 &1842278111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1198,7 +1208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1de25b4e26285433b9851dcbe9b568ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundLevel: 0
+  soundLevel: 2
   sfxLevel: 0
 --- !u!4 &1842278112
 Transform:

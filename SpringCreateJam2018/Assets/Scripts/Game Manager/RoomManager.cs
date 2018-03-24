@@ -23,12 +23,18 @@ public class RoomManager : MonoBehaviour {
 	private void Awake()
 	{
         if(instance != null){
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
         else{
             instance = this;
             DontDestroyOnLoad(gameObject);
             fade = GetComponent<Fade>();
+
+
+            for (int i = 0; i < rooms.Length; i++){
+                Debug.Log(rooms[i].name);
+                Debug.Log(rooms[i].isDead);
+            }
         }
 	}
 
@@ -42,13 +48,29 @@ public class RoomManager : MonoBehaviour {
 	}
 
     public void GridButton(int personNum){
-        if(!rooms[personNum].isDead){
-            fade.FadeTo(rooms[personNum].roomName);
-            Debug.Log("Is there an error here?");
+        if(lobbyRoom){
+            if (!rooms[personNum].isDead)
+            {
+                fade.FadeTo(rooms[personNum].roomName);
+                Debug.Log("Is there an error here?");
+            }
+            else
+            {
+                Debug.Log("Dead, can't go there");
+                Debug.Log(lobbyRoom);
+            }
         }
-        else{
-            Debug.Log("Dead, can't go there");
+        else if(!lobbyRoom && SceneManager.GetActiveScene().name == "Choose"){
+            if(!rooms[personNum].isDead){
+                rooms[personNum].isDead = true;
+                Debug.Log(rooms[personNum].name);
+                Debug.Log(rooms[personNum].isDead);
+            }
+            else{
+                Debug.Log("This one is already dead, pick another one");
+            }
         }
+
     }
 
     public void GoBack(){
@@ -70,7 +92,7 @@ public class RoomManager : MonoBehaviour {
     }
 
     private void CheckArea(){
-        if (SceneManager.GetActiveScene().name == "Bellboy" || SceneManager.GetActiveScene().name == "Choose")
+        if (SceneManager.GetActiveScene().name == "Bellboy")
         {
             lobbyRoom = true;
         }
