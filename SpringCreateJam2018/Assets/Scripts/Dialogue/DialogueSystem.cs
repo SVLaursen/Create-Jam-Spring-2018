@@ -14,11 +14,15 @@ public class DialogueSystem : MonoBehaviour {
     public Animator animator;
 
     public GameObject diaBox;
+    public bool isMale;
 
     private Queue<string> sentences;
 
     GameObject obj;
     RoomManager roomManager;
+
+    GameObject audioObj;
+    AudioManager audio;
 
 	// Use this for initialization
 	void Start () {
@@ -27,11 +31,21 @@ public class DialogueSystem : MonoBehaviour {
         obj = GameObject.Find("RoomManager");
         roomManager = obj.GetComponent<RoomManager>();
 
+        audioObj = GameObject.Find("AudioSystem");
+        audio = audioObj.GetComponent<AudioManager>();
+
 	}
 	
     public void StartDialogue(Dialogue dialogue)
     {
         diaBox.SetActive(true);
+
+        if(isMale){
+            audio.PlaySound2D("Male Voices");
+        }
+        else{
+            audio.PlaySound2D("Female Voices");
+        }
 
         nameText.text = dialogue.name;
 
@@ -58,7 +72,17 @@ public class DialogueSystem : MonoBehaviour {
         }
 
         if(roomManager.questions > 0){
+            
             roomManager.questions -= 1;
+
+            if (isMale)
+            {
+                audio.PlaySound2D("Male Voices");
+            }
+            else
+            {
+                audio.PlaySound2D("Female Voices");
+            }
 
             string sentence = sentences.Dequeue();
 

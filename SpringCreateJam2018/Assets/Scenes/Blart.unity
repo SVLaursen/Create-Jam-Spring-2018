@@ -148,6 +148,8 @@ MonoBehaviour:
   nameText: {fileID: 1974608048}
   dialogueText: {fileID: 1076704358}
   animator: {fileID: 214686718}
+  diaBox: {fileID: 540362203}
+  isMale: 1
 --- !u!4 &438916059
 Transform:
   m_ObjectHideFlags: 0
@@ -278,9 +280,34 @@ Prefab:
       propertyPath: m_AnchoredPosition.x
       value: -114
       objectReference: {fileID: 0}
+    - target: {fileID: 224159900731532568, guid: a142f6725afa1544aa08e3ea029ee0bc,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -10.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 224159900731532568, guid: a142f6725afa1544aa08e3ea029ee0bc,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 201.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224159900731532568, guid: a142f6725afa1544aa08e3ea029ee0bc,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 492.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 224159900731532568, guid: a142f6725afa1544aa08e3ea029ee0bc,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 300.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a142f6725afa1544aa08e3ea029ee0bc, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &540362203 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1865241178084180, guid: a142f6725afa1544aa08e3ea029ee0bc,
+    type: 2}
+  m_PrefabInternal: {fileID: 540362202}
 --- !u!1001 &755251200
 Prefab:
   m_ObjectHideFlags: 0

@@ -235,9 +235,29 @@ Prefab:
       propertyPath: m_AnchoredPosition.x
       value: -117
       objectReference: {fileID: 0}
+    - target: {fileID: 224159900731532568, guid: a142f6725afa1544aa08e3ea029ee0bc,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -17.634
+      objectReference: {fileID: 0}
+    - target: {fileID: 224159900731532568, guid: a142f6725afa1544aa08e3ea029ee0bc,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 193.0293
+      objectReference: {fileID: 0}
+    - target: {fileID: 224159900731532568, guid: a142f6725afa1544aa08e3ea029ee0bc,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 414.57
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a142f6725afa1544aa08e3ea029ee0bc, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &83325737 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1865241178084180, guid: a142f6725afa1544aa08e3ea029ee0bc,
+    type: 2}
+  m_PrefabInternal: {fileID: 83325736}
 --- !u!1001 &249626874
 Prefab:
   m_ObjectHideFlags: 0
@@ -641,6 +661,16 @@ Prefab:
       propertyPath: animator
       value: 
       objectReference: {fileID: 1271789215}
+    - target: {fileID: 114812124027295698, guid: dd0385480c3e2574b9ab1eea3454df78,
+        type: 2}
+      propertyPath: diaBox
+      value: 
+      objectReference: {fileID: 83325737}
+    - target: {fileID: 114812124027295698, guid: dd0385480c3e2574b9ab1eea3454df78,
+        type: 2}
+      propertyPath: isMale
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd0385480c3e2574b9ab1eea3454df78, type: 2}
   m_IsPrefabParent: 0

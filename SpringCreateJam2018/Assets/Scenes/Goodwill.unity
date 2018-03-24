@@ -560,6 +560,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a142f6725afa1544aa08e3ea029ee0bc, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &889969306 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1865241178084180, guid: a142f6725afa1544aa08e3ea029ee0bc,
+    type: 2}
+  m_PrefabInternal: {fileID: 889969305}
 --- !u!95 &1023713145 stripped
 Animator:
   m_PrefabParentObject: {fileID: 95813640361924730, guid: a142f6725afa1544aa08e3ea029ee0bc,
@@ -631,6 +636,11 @@ Prefab:
       propertyPath: animator
       value: 
       objectReference: {fileID: 1023713145}
+    - target: {fileID: 114812124027295698, guid: dd0385480c3e2574b9ab1eea3454df78,
+        type: 2}
+      propertyPath: diaBox
+      value: 
+      objectReference: {fileID: 889969306}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd0385480c3e2574b9ab1eea3454df78, type: 2}
   m_IsPrefabParent: 0

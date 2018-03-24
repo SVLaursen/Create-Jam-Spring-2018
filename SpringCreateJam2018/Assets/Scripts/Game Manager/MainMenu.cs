@@ -11,11 +11,22 @@ public class MainMenu : MonoBehaviour {
     public Canvas mainCanvas;
     public Canvas tutorialCanvas;
 
-    public void PlayGame(){
+    GameObject audioObj;
+    AudioManager audio;
+
+	private void Start()
+	{
+        audioObj = GameObject.Find("AudioSystem");
+        audio = audioObj.GetComponent<AudioManager>();
+	}
+
+	public void PlayGame(){
+        audio.PlaySound2D("Door");
         fade.FadeTo("Bellboy");
     }
 
     public void HowTo(){
+        audio.PlaySound2D("Click");
         if(mainCanvas.enabled){
             tutorialCanvas.enabled = true;
             mainCanvas.enabled = false;
@@ -28,6 +39,7 @@ public class MainMenu : MonoBehaviour {
 
 	public void QuitGame()
 	{
+        audio.PlaySound2D("Click");
         Application.Quit();
 	}
 

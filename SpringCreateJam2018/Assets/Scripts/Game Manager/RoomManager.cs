@@ -11,6 +11,9 @@ public class RoomManager : MonoBehaviour {
     public Canvas gridPanel;
     public Canvas backCanvas;
 
+    GameObject audioObj;
+    AudioManager audio;
+
     private Fade fade;
 
     public int days;
@@ -32,6 +35,8 @@ public class RoomManager : MonoBehaviour {
             instance = this;
             DontDestroyOnLoad(gameObject);
             fade = GetComponent<Fade>();
+            audioObj = GameObject.Find("AudioSystem");
+            audio = audioObj.GetComponent<AudioManager>();
         }
 
         Debug.Log("Does this update?");
@@ -53,22 +58,25 @@ public class RoomManager : MonoBehaviour {
         if(lobbyRoom){
             if (!rooms[personNum].isDead)
             {
+                audio.PlaySound2D("Door"); //Door sound
                 fade.FadeTo(rooms[personNum].roomName);
             }
         }
         else if(!lobbyRoom && SceneManager.GetActiveScene().name == "Choose"){
             if(!rooms[personNum].isDead){
                 rooms[personNum].isDead = true;
-                //TODO: After one has been checked go to day switch screen!
+                audio.PlaySound2D("Death Scream"); //Door sound
+                newDay = true;
             }
             else{
-                //TODO: Initiate dialogue that says it can't be chosen.
+                audio.PlaySound2D("Denied");
             }
         }
 
     }
 
     public void GoBack(){
+        audio.PlaySound2D("Click"); //Input click sound
         fade.FadeTo("Bellboy");
     }
 

@@ -504,6 +504,16 @@ Prefab:
       propertyPath: animator
       value: 
       objectReference: {fileID: 940054494}
+    - target: {fileID: 114812124027295698, guid: dd0385480c3e2574b9ab1eea3454df78,
+        type: 2}
+      propertyPath: diaBox
+      value: 
+      objectReference: {fileID: 1997930707}
+    - target: {fileID: 114812124027295698, guid: dd0385480c3e2574b9ab1eea3454df78,
+        type: 2}
+      propertyPath: isMale
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd0385480c3e2574b9ab1eea3454df78, type: 2}
   m_IsPrefabParent: 0
@@ -631,6 +641,21 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: DisplayNextSentence
       objectReference: {fileID: 0}
+    - target: {fileID: 224159900731532568, guid: a142f6725afa1544aa08e3ea029ee0bc,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -21.163757
+      objectReference: {fileID: 0}
+    - target: {fileID: 224159900731532568, guid: a142f6725afa1544aa08e3ea029ee0bc,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 422.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a142f6725afa1544aa08e3ea029ee0bc, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1997930707 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1865241178084180, guid: a142f6725afa1544aa08e3ea029ee0bc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1997930706}

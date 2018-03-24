@@ -167,6 +167,11 @@ Prefab:
       propertyPath: animator
       value: 
       objectReference: {fileID: 767273343}
+    - target: {fileID: 114812124027295698, guid: dd0385480c3e2574b9ab1eea3454df78,
+        type: 2}
+      propertyPath: diaBox
+      value: 
+      objectReference: {fileID: 491771488}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd0385480c3e2574b9ab1eea3454df78, type: 2}
   m_IsPrefabParent: 0
@@ -288,9 +293,34 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: DisplayNextSentence
       objectReference: {fileID: 0}
+    - target: {fileID: 224159900731532568, guid: a142f6725afa1544aa08e3ea029ee0bc,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -228.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224159900731532568, guid: a142f6725afa1544aa08e3ea029ee0bc,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 295.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224159900731532568, guid: a142f6725afa1544aa08e3ea029ee0bc,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -3.7161493
+      objectReference: {fileID: 0}
+    - target: {fileID: 224159900731532568, guid: a142f6725afa1544aa08e3ea029ee0bc,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 457.27
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a142f6725afa1544aa08e3ea029ee0bc, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &491771488 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1865241178084180, guid: a142f6725afa1544aa08e3ea029ee0bc,
+    type: 2}
+  m_PrefabInternal: {fileID: 491771487}
 --- !u!114 &756451212 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114812124027295698, guid: dd0385480c3e2574b9ab1eea3454df78,
