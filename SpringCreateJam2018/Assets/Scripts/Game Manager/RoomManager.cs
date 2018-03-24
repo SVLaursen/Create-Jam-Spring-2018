@@ -6,13 +6,12 @@ using UnityEngine.UI;
 
 public class RoomManager : MonoBehaviour {
 
-    /*
-     *  Missing function that implements the buttons to the panel
-     *  in a grid formation.
-     */
     private RoomManager instance;
     public Rooms[] rooms;
     private Fade fade;
+
+    public int days;
+    public int questions;
 
     public Image[] gridImg;
     public Image[] aliveImg;
@@ -31,10 +30,6 @@ public class RoomManager : MonoBehaviour {
             fade = GetComponent<Fade>();
 
 
-            for (int i = 0; i < rooms.Length; i++){
-                Debug.Log(rooms[i].name);
-                Debug.Log(rooms[i].isDead);
-            }
         }
 	}
 
@@ -63,11 +58,10 @@ public class RoomManager : MonoBehaviour {
         else if(!lobbyRoom && SceneManager.GetActiveScene().name == "Choose"){
             if(!rooms[personNum].isDead){
                 rooms[personNum].isDead = true;
-                Debug.Log(rooms[personNum].name);
-                Debug.Log(rooms[personNum].isDead);
+                //TODO: After one has been checked go to day switch screen!
             }
             else{
-                Debug.Log("This one is already dead, pick another one");
+                //TODO: Initiate dialogue that says it can't be chosen.
             }
         }
 
