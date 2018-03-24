@@ -4,9 +4,19 @@ using UnityEngine;
 
 public class EndingManager : MonoBehaviour {
 
-	// Use this for initialization
+    GameObject roomManagerObj;
+    RoomManager roomManager;
+
 	void Start () {
-		
+        roomManagerObj = GameObject.Find("RoomManager");
+        roomManager = GetComponent<RoomManager>();
+
+        for (int i = 0; i < roomManager.rooms.Length; i++){
+            if(roomManager.rooms[i].isDead){
+                Debug.Log(roomManager.rooms[i].name);
+            }
+
+        }
 	}
 	
 	// Update is called once per frame

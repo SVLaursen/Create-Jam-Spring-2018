@@ -9,6 +9,8 @@ public class RoomManager : MonoBehaviour {
     public static RoomManager instance;
     public Rooms[] rooms;
     public Canvas gridPanel;
+    public Canvas backCanvas;
+
     private Fade fade;
 
     public int days;
@@ -71,8 +73,11 @@ public class RoomManager : MonoBehaviour {
     }
 
     private void DrawGrid(){
-        if(SceneManager.GetActiveScene().name == "Bellboy" || SceneManager.GetActiveScene().name == "Choose"){
+        if (SceneManager.GetActiveScene().name == "Bellboy" || SceneManager.GetActiveScene().name == "Choose")
+        {
             gridPanel.enabled = true;
+            backCanvas.enabled = false; 
+
             for (int i = 0; i < gridImg.Length; i++)
             {
                 if (gridImg[i] != null)
@@ -86,10 +91,14 @@ public class RoomManager : MonoBehaviour {
                         gridImg[i].sprite = deadImg[i].sprite;
                     }
                 }
-            } 
+            }
         }
         else{
             gridPanel.enabled = false;
+
+            if(SceneManager.GetActiveScene().name != "MainMenu"){
+                backCanvas.enabled = true;
+            }
         }
     }
 

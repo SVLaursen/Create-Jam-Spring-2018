@@ -6,7 +6,16 @@ public class DialogueTrigger : MonoBehaviour {
 
     public Dialogue dialogue;
 
-    public void TriggerDialogue()
+    GameObject obj;
+    RoomManager roomManager;
+
+	private void Awake()
+	{
+        obj = GameObject.Find("RoomManager");
+        roomManager = obj.GetComponent<RoomManager>();
+	}
+
+	public void TriggerDialogue()
     {
         FindObjectOfType<DialogueSystem>().StartDialogue(dialogue);
     }
