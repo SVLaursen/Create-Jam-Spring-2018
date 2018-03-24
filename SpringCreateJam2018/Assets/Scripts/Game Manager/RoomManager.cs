@@ -6,12 +6,14 @@ using UnityEngine.UI;
 
 public class RoomManager : MonoBehaviour {
 
-    private RoomManager instance;
+    public static RoomManager instance;
     public Rooms[] rooms;
+    public Canvas gridPanel;
     private Fade fade;
 
     public int days;
     public int questions;
+    public bool newDay;
 
     public Image[] gridImg;
     public Image[] aliveImg;
@@ -22,24 +24,27 @@ public class RoomManager : MonoBehaviour {
 	private void Awake()
 	{
         if(instance != null){
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
         else{
             instance = this;
             DontDestroyOnLoad(gameObject);
             fade = GetComponent<Fade>();
-
-
         }
+
+        Debug.Log("Does this update?");
 	}
 
 	private void Update()
 	{
         if (SceneManager.GetActiveScene().name != "MainMenu")
         {
-            CheckArea();
+            CheckArea(); //Checks which one of the grid rooms it is, if it is one.
             DrawGrid();
+            StartNewDay(); //Loop that starts to restart the game.
         }
+
+
 	}
 
     public void GridButton(int personNum){
@@ -47,12 +52,6 @@ public class RoomManager : MonoBehaviour {
             if (!rooms[personNum].isDead)
             {
                 fade.FadeTo(rooms[personNum].roomName);
-                Debug.Log("Is there an error here?");
-            }
-            else
-            {
-                Debug.Log("Dead, can't go there");
-                Debug.Log(lobbyRoom);
             }
         }
         else if(!lobbyRoom && SceneManager.GetActiveScene().name == "Choose"){
@@ -72,16 +71,25 @@ public class RoomManager : MonoBehaviour {
     }
 
     private void DrawGrid(){
-
-        for (int i = 0; i < gridImg.Length; i++){
-            if(gridImg[i] != null){
-                if(!rooms[i].isDead){
-                    gridImg[i].sprite = aliveImg[i].sprite;
+        if(SceneManager.GetActiveScene().name == "Bellboy" || SceneManager.GetActiveScene().name == "Choose"){
+            gridPanel.enabled = true;
+            for (int i = 0; i < gridImg.Length; i++)
+            {
+                if (gridImg[i] != null)
+                {
+                    if (!rooms[i].isDead)
+                    {
+                        gridImg[i].sprite = aliveImg[i].sprite;
+                    }
+                    else
+                    {
+                        gridImg[i].sprite = deadImg[i].sprite;
+                    }
                 }
-                else{
-                    gridImg[i].sprite = deadImg[i].sprite;
-                }
-            }
+            } 
+        }
+        else{
+            gridPanel.enabled = false;
         }
     }
 
@@ -93,6 +101,26 @@ public class RoomManager : MonoBehaviour {
         else
         {
             lobbyRoom = false;
+        }
+    }
+
+    private void StartNewDay(){
+        if(newDay){
+            days++;
+
+            if(days >= 8){
+                fade.FadeTo("EndScene");
+                newDay = false; //breaks the loop
+            }
+            else{
+                questions = 10 - days;
+                fade.FadeTo("Bellboy");
+                newDay = false; //Breaks the loop
+            }
+        }
+
+        if(!newDay && questions == 0 && SceneManager.GetActiveScene().name != "Choose"){
+            fade.FadeTo("Choose");
         }
     }
 
