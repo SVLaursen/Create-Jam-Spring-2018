@@ -128,7 +128,7 @@ public class RoomManager : MonoBehaviour {
             }
         }
 
-        if(!newDay && questions == 0 && SceneManager.GetActiveScene().name != "Choose"){
+        if(!newDay && questions < 0 && SceneManager.GetActiveScene().name != "Choose"){
             fade.FadeTo("Choose");
         }
     }

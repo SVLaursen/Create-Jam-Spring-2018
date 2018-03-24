@@ -382,6 +382,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114570171979762664, guid: 268b632cf59b04c4c8b4c2909ad4523a,
+        type: 2}
+      propertyPath: menuTheme
+      value: 
+      objectReference: {fileID: 8300000, guid: b00c10e442dd64a4195f2ac9afbb8e90, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 268b632cf59b04c4c8b4c2909ad4523a, type: 2}
   m_IsPrefabParent: 0

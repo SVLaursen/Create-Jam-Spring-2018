@@ -13,16 +13,26 @@ public class DialogueSystem : MonoBehaviour {
 
     public Animator animator;
 
+    public GameObject diaBox;
+
     private Queue<string> sentences;
+
+    GameObject obj;
+    RoomManager roomManager;
 
 	// Use this for initialization
 	void Start () {
         sentences = new Queue<string>();
 
+        obj = GameObject.Find("RoomManager");
+        roomManager = obj.GetComponent<RoomManager>();
+
 	}
 	
     public void StartDialogue(Dialogue dialogue)
     {
+        diaBox.SetActive(true);
+
         nameText.text = dialogue.name;
 
         animator.SetBool("isOpen",true);
@@ -47,11 +57,20 @@ public class DialogueSystem : MonoBehaviour {
             return;
         }
 
-        string sentence = sentences.Dequeue();
+        if(roomManager.questions > 0){
+            roomManager.questions -= 1;
 
-        dialogueText.text = sentence;
-        StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
+            string sentence = sentences.Dequeue();
+
+            dialogueText.text = sentence;
+            StopAllCoroutines();
+            StartCoroutine(TypeSentence(sentence));
+        }
+        else if(roomManager.questions - 1 == -1){
+            roomManager.questions = -1;
+        }
+
+
     }
 
     IEnumerator TypeSentence(string sentence)
