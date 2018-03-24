@@ -6,14 +6,10 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour {
 
-    private Fade fade;
+    public Fade fade;
 
     public Canvas mainCanvas;
     public Canvas tutorialCanvas;
-
-	void Start () {
-        fade = GetComponent<Fade>();
-	}
 
     public void PlayGame(){
         fade.FadeTo("Bellboy");

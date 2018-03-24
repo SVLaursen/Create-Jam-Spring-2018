@@ -329,6 +329,8 @@
     <Compile Include="Assets\Scripts\Game Manager\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Game Manager\RoomManager.cs" />
     <Compile Include="Assets\Scripts\Graphics System\SplashScreen.cs" />
+    <Compile Include="Assets\Scripts\Graphics System\TooltipTrigger.cs" />
+    <Compile Include="Assets\Scripts\Graphics System\TooltipView.cs" />
     <Compile Include="Assets\Scripts\Sound System\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Sound System\MusicManager.cs" />
     <Compile Include="Assets\Scripts\Sound System\SoundLibrary.cs" />

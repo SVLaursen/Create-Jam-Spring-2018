@@ -14,7 +14,7 @@ public class Fade : MonoBehaviour {
         StartCoroutine(FadeIn());
     }
 
-    public void FadeTo(string scene)
+	public void FadeTo(string scene)
     {
         StartCoroutine(FadeOut(scene));
     }

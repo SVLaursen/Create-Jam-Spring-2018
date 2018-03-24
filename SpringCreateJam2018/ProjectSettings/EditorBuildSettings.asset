@@ -11,3 +11,36 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Bellboy.unity
     guid: b02d00a242e6446efa1e84d3274e6287
+  - enabled: 1
+    path: Assets/Scenes/Blart.unity
+    guid: ba6b81281e3ad43bc8fe4691d0d9e6e0
+  - enabled: 1
+    path: Assets/Scenes/Choose.unity
+    guid: bee6d5510b6d349f19e03023f61e9dbd
+  - enabled: 1
+    path: Assets/Scenes/Fred.unity
+    guid: 155345965f2e54d97a939626a3a39edc
+  - enabled: 1
+    path: Assets/Scenes/George.unity
+    guid: 7dfe5b205214842e0bc0a2b7e1093e61
+  - enabled: 1
+    path: Assets/Scenes/Goodwill.unity
+    guid: 1b2508c837686469f9c45bc594fbe3ad
+  - enabled: 1
+    path: Assets/Scenes/Lecter.unity
+    guid: 6f8922581c9a14a8c93d3bea80364989
+  - enabled: 1
+    path: Assets/Scenes/Mathieus.unity
+    guid: a3a28c174399141258386355eddc77d8
+  - enabled: 1
+    path: Assets/Scenes/Penelope.unity
+    guid: f2c3e2d7a37784be4a9121a3dcaeb599
+  - enabled: 1
+    path: Assets/Scenes/Pensworth.unity
+    guid: 7d8b9ded5e5774a1c9c417ca19abaaa5
+  - enabled: 1
+    path: Assets/Scenes/Richard.unity
+    guid: 3b28da8410eb44c5db30772b9acaf91f
+  - enabled: 1
+    path: Assets/Scenes/William.unity
+    guid: 7dd73507130254ff79ca1b38468b9375

@@ -12,7 +12,7 @@ public class RoomManager : MonoBehaviour {
      */
     private RoomManager instance;
     public Rooms[] rooms;
-    public Fade fade;
+    private Fade fade;
 
     public Image[] gridImg;
     public Image[] aliveImg;
@@ -44,6 +44,7 @@ public class RoomManager : MonoBehaviour {
     public void GridButton(int personNum){
         if(!rooms[personNum].isDead){
             fade.FadeTo(rooms[personNum].roomName);
+            Debug.Log("Is there an error here?");
         }
         else{
             Debug.Log("Dead, can't go there");
@@ -59,10 +60,10 @@ public class RoomManager : MonoBehaviour {
         for (int i = 0; i < gridImg.Length; i++){
             if(gridImg[i] != null){
                 if(!rooms[i].isDead){
-                    gridImg[i] = aliveImg[i];
+                    gridImg[i].sprite = aliveImg[i].sprite;
                 }
                 else{
-                    gridImg[i] = deadImg[i];
+                    gridImg[i].sprite = deadImg[i].sprite;
                 }
             }
         }
