@@ -326,7 +326,6 @@
     <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
     <Compile Include="Assets\Scripts\Game Manager\EndingManager.cs" />
     <Compile Include="Assets\Scripts\Game Manager\Fade.cs" />
-    <Compile Include="Assets\Scripts\Game Manager\GameManager.cs" />
     <Compile Include="Assets\Scripts\Game Manager\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Game Manager\RoomManager.cs" />
     <Compile Include="Assets\Scripts\Graphics System\SplashScreen.cs" />
