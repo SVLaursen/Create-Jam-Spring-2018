@@ -38,8 +38,7 @@ public class RoomManager : MonoBehaviour {
             audioObj = GameObject.Find("AudioSystem");
             audio = audioObj.GetComponent<AudioManager>();
         }
-
-        Debug.Log("Does this update?");
+         
 	}
 
 	private void Update()
@@ -61,12 +60,21 @@ public class RoomManager : MonoBehaviour {
                 audio.PlaySound2D("Door"); //Door sound
                 fade.FadeTo(rooms[personNum].roomName);
             }
+            else{
+                audio.PlaySound2D("Locked");
+            }
         }
         else if(!lobbyRoom && SceneManager.GetActiveScene().name == "Choose"){
             if(!rooms[personNum].isDead){
                 rooms[personNum].isDead = true;
                 audio.PlaySound2D("Death Scream"); //Door sound
-                newDay = true;
+                if(days >= 8){
+                    fade.FadeTo("EndScene");
+                }
+                else{
+                    newDay = true;
+                }
+
             }
             else{
                 audio.PlaySound2D("Denied");
@@ -104,7 +112,7 @@ public class RoomManager : MonoBehaviour {
         else{
             gridPanel.enabled = false;
 
-            if(SceneManager.GetActiveScene().name != "MainMenu"){
+            if(SceneManager.GetActiveScene().name != "MainMenu" || SceneManager.GetActiveScene().name != "EndScene"){
                 backCanvas.enabled = true;
             }
         }
@@ -136,7 +144,7 @@ public class RoomManager : MonoBehaviour {
             }
         }
 
-        if(!newDay && questions < 0 && SceneManager.GetActiveScene().name != "Choose"){
+        if(!newDay && questions < 0 && SceneManager.GetActiveScene().name != "Choose" && days != 8){
             fade.FadeTo("Choose");
         }
     }

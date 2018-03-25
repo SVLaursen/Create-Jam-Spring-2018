@@ -16,9 +16,9 @@ public class SplashScreen : MonoBehaviour {
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Joystick1Button7))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene("mainMenu");
+            SceneManager.LoadScene("MainMenu");
         }
     }
 

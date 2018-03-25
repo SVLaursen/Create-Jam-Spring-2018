@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour {
 
     public Canvas mainCanvas;
     public Canvas tutorialCanvas;
+    public Canvas creditsCanvas;
 
     GameObject audioObj;
     AudioManager audio;
@@ -33,6 +34,19 @@ public class MainMenu : MonoBehaviour {
         }
         else{
             tutorialCanvas.enabled = false;
+            mainCanvas.enabled = true;
+        }
+    }
+
+    public void Credits(){
+        audio.PlaySound2D("Door");
+
+        if(mainCanvas.enabled){
+            creditsCanvas.enabled = true;
+            mainCanvas.enabled = false;
+        }
+        else{
+            creditsCanvas.enabled = false;
             mainCanvas.enabled = true;
         }
     }

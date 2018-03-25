@@ -154,7 +154,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -215,11 +215,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_Font: {fileID: 12800000, guid: 643305ea39b5945d6a190ccc5c636bc7, type: 3}
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -227,7 +227,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Text
+  m_Text: 
 --- !u!1 &555834212
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,6 +743,11 @@ Prefab:
       propertyPath: isMale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114812124027295698, guid: dd0385480c3e2574b9ab1eea3454df78,
+        type: 2}
+      propertyPath: continueButton
+      value: 
+      objectReference: {fileID: 1638241917}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd0385480c3e2574b9ab1eea3454df78, type: 2}
   m_IsPrefabParent: 0
@@ -899,8 +904,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_Font: {fileID: 12800000, guid: 7ab0566fbe28449208b8c3628f3b77d4, type: 3}
+    m_FontSize: 24
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -1042,14 +1047,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Fred
+    name: Frederick
     sentences:
-    - First Iniated
-    - "Question 1\t"
-    - Question 2
-    - Question 2
-    - Question 2
-    - Question 2
+    - While the farm life is the life God has chosen for me, occasionally I need time
+      in London to advertise my trade and agriculture! My name is Frederick, and I
+      am merely a humble farmer hailing from Liverpool.
+    - "Yes the farm life...wasn\u2019t always who I was. I served in 2nd cavalry in
+      Afghanistan, fighting the good fight. After I was dismissed from service, wounded
+      in combat,  I decided as I return to England, I needed a new life, yet had a
+      hardly a measly sum..."
+    - But my luck became more fortunate as  I uh....purchased a plot of land from
+      one Langley Trevor at bargain. He uh, well ironically,  wanted to start a new
+      life as well, subsequently moving to India. And that's that.
+    - There's something off about that George Fellow, interesting to say the least
+      really. He was pitching his wares such as pocket watches, hats, jewelry, all
+      at peculiarly low prices for me....
+    - ' Normally these would heed no interest to a man such as myself, but I could
+      swear one of the pocket watches had some worn complexities as well as some dried
+      off blood, which had been liberally washed.....'
+    - "Wherever he\u2019s getting his wares, they are not legitimate, that much is
+      certain, but what frightens me most is that his wars could possibly be from
+      the deceased!"
 --- !u!114 &2054905718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1116,7 +1134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.303}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

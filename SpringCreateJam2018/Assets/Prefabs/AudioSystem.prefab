@@ -54,8 +54,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundGroups:
-  - groupID: 
-    group: []
+  - groupID: Click
+    group:
+    - {fileID: 8300000, guid: 906be362009c54ce1b36c012be80aa45, type: 3}
+  - groupID: Door
+    group:
+    - {fileID: 8300000, guid: ff3b09fef2db94b4ca1f46de8b902b4d, type: 3}
+  - groupID: Male Voices
+    group:
+    - {fileID: 0}
+    - {fileID: 8300000, guid: 6185f8ebd2c29452395199ae9f27f89a, type: 3}
+    - {fileID: 8300000, guid: 94e57ce85da374bffb910acfec817902, type: 3}
+    - {fileID: 8300000, guid: ee6d4471472e646bc88063242ceacfea, type: 3}
+    - {fileID: 8300000, guid: d878db2f9c8c04737a9f47dac0a871d1, type: 3}
+    - {fileID: 8300000, guid: ed887feeac1964b20af60c35ae6fe595, type: 3}
+    - {fileID: 8300000, guid: 2d192d526993f4d3ba8a65d1d418ab38, type: 3}
+    - {fileID: 8300000, guid: 76174afa1c01e4b339574731fe0f674d, type: 3}
+  - groupID: Female Voices
+    group:
+    - {fileID: 8300000, guid: 68dcb344e99e24da9ad442ff15276d17, type: 3}
+    - {fileID: 8300000, guid: 14b9f88a64fdf48209472334610b415e, type: 3}
+    - {fileID: 8300000, guid: 551c322f16acf478b89a9a44ea7ef866, type: 3}
+  - groupID: Death Scream
+    group:
+    - {fileID: 8300000, guid: fee59950968c7c1408cdd9306eb0aa71, type: 3}
+    - {fileID: 8300000, guid: 620dffe116b5df14a8a64cbb7b6245a5, type: 3}
+    - {fileID: 8300000, guid: a2f7e6df2d8ee1441870abf437595687, type: 3}
+    - {fileID: 8300000, guid: 7b0ca7b5272cd174eac5269e843b9dc6, type: 3}
+    - {fileID: 8300000, guid: dd31f2aae981f654fa92d438c7a7354a, type: 3}
+  - groupID: Patron
+    group:
+    - {fileID: 8300000, guid: 6c387cdc5e13c461cb40b4da9d0688f1, type: 3}
+    - {fileID: 8300000, guid: 89c222b8d945c4077a0784514b0ebb2f, type: 3}
+  - groupID: Denied
+    group:
+    - {fileID: 8300000, guid: 58e405699dcfe5e4aac53bd67c88f317, type: 3}
+  - groupID: Locked
+    group:
+    - {fileID: 8300000, guid: 3605e63fabbe0464c9df6f5d4382493c, type: 3}
 --- !u!114 &114570171979762664
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -68,7 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainTheme: {fileID: 8300000, guid: 461731a887c35418c8d46dc8fab206f3, type: 3}
-  menuTheme: {fileID: 8300000, guid: 461731a887c35418c8d46dc8fab206f3, type: 3}
+  menuTheme: {fileID: 8300000, guid: b00c10e442dd64a4195f2ac9afbb8e90, type: 3}
 --- !u!114 &114594387991261064
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -81,4 +117,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundLevel: 2
-  sfxLevel: 0
+  sfxLevel: 2.2

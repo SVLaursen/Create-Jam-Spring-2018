@@ -349,6 +349,11 @@ Prefab:
       propertyPath: isMale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114812124027295698, guid: dd0385480c3e2574b9ab1eea3454df78,
+        type: 2}
+      propertyPath: continueButton
+      value: 
+      objectReference: {fileID: 1810907579}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd0385480c3e2574b9ab1eea3454df78, type: 2}
   m_IsPrefabParent: 0
@@ -596,11 +601,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_Font: {fileID: 12800000, guid: 643305ea39b5945d6a190ccc5c636bc7, type: 3}
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -608,7 +613,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Text
+  m_Text: 
 --- !u!1 &1248137532
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,7 +731,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -818,14 +823,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: PlaceHolder
+    name: Jack Lecter
     sentences:
-    - First Iniated
-    - "Question 1\t"
-    - Question 2
-    - Question 2
-    - Question 2
-    - Question 2
+    - 'I am Jack Lecter, MD, Surgeon, what can I do for you? '
+    - 'Proud of myself, really. Why you may ask? Well, I recently completed my  fellowship
+      at Oxford, now I can help others who desperately need it most! '
+    - Recently I have begun workups on fighters in the Anglo-Afghan war. And there
+      was some interesting stories they told me....
+    - ' Apparently there was a grizzled medic on the  frontlines who would willing
+      let soldiers die in order to experiment with their bodies! A matter of fact,
+      the description of this medic matches the one within this same hotel!'
 --- !u!114 &1443866368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -892,7 +899,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.303}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -935,8 +942,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_Font: {fileID: 12800000, guid: 7ab0566fbe28449208b8c3628f3b77d4, type: 3}
+    m_FontSize: 24
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0

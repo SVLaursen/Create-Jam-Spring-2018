@@ -15,6 +15,7 @@ public class DialogueSystem : MonoBehaviour {
 
     public GameObject diaBox;
     public bool isMale;
+    public GameObject continueButton;
 
     private Queue<string> sentences;
 
@@ -68,6 +69,7 @@ public class DialogueSystem : MonoBehaviour {
         if (sentences.Count == 0)
         {
             EndDialogue();
+            continueButton.SetActive(false);
             return;
         }
 

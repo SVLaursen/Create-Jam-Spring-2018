@@ -195,6 +195,11 @@ Prefab:
       propertyPath: isMale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114812124027295698, guid: dd0385480c3e2574b9ab1eea3454df78,
+        type: 2}
+      propertyPath: continueButton
+      value: 
+      objectReference: {fileID: 742070574}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd0385480c3e2574b9ab1eea3454df78, type: 2}
   m_IsPrefabParent: 0
@@ -830,7 +835,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -922,14 +927,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Wiliam
+    name: Wiliam Griffin
     sentences:
-    - First Iniated
-    - "Question 1\t"
-    - Question 2
-    - Question 2
-    - Question 2
-    - Question 2
+    - Corporal William Griffin, medic who served  under the 66th regiment in Afghanistan.
+    - The war is a terrible thing indeed, yet not necessarily for myself. You see,
+      my medical expertise saw a natural outlet, and I was able to practice my work
+      and more often than not save the lives of British soldiers on the field!
+    - You know, there is a man in here claiming to have served in Afghanistan and
+      he was discharged honorably....
+    - 'Normally I would think nothing of it, but the thing is that I somewhat recognize
+      that man, he looked like one Private Edward Doyle, a footsoldier dishonourably
+      discharged for friendly fire, seemed as if there was a dispute of some sort... '
+    - "The man said his name was Frederick? Hm...Maybe he\u2019s hoping his past would
+      be forgotten, in more ways than one... "
+    - "And it just so happens that this man from \u201CLiverpool\u201D took over the
+      farm of a well-respected Langley Trevor...Do you think he...Oh God...he killed
+      him didn\u2019t he?"
 --- !u!114 &1330836057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -996,7 +1009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.303}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1083,8 +1096,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_Font: {fileID: 12800000, guid: 7ab0566fbe28449208b8c3628f3b77d4, type: 3}
+    m_FontSize: 24
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -1119,11 +1132,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_Font: {fileID: 12800000, guid: 643305ea39b5945d6a190ccc5c636bc7, type: 3}
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -1131,7 +1144,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Text
+  m_Text: 
 --- !u!114 &2120403127 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114812124027295698, guid: dd0385480c3e2574b9ab1eea3454df78,

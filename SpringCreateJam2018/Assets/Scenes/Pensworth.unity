@@ -165,14 +165,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: PlaceHolder
+    name: Lady Pensworth
     sentences:
-    - First Iniated
-    - "Question 1\t"
-    - Question 2
-    - Question 2
-    - Question 2
-    - Question 2
+    - Oh how lovely! The last guest arrived! Allow me to introduce myself, I am called
+      Lady Pensworth, recently sired a healthy child! If there's anything I can do
+      for you please do not hesitate to ask!
+    - "Suspicions? Rumours? About me? W-what would anyone have heard of! Just because
+      my little Theo\u2019s eye colors are different than mine and my husband? Hardly
+      anything to start rumours over! Just for the purpose of dispute.."
+    - My husband is a police officer at Scotland Yard, and the stories he has told
+      me...mostly revolving around Sheriff Blart. Apparently as of lately his drinking
+      habits have gotten worse as time passes...
+    - " I\u2019m not one to gossip, but I can smell the liquor on his breath miles
+      away! And my husband has often quipped that when he sees the Sheriff\u2019s
+      wife she usually covers her face, hiding marks given by her husband, ghastly
+      really."
 --- !u!114 &198493203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,7 +246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.303}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -382,6 +389,11 @@ Prefab:
       propertyPath: diaBox
       value: 
       objectReference: {fileID: 1174320493}
+    - target: {fileID: 114812124027295698, guid: dd0385480c3e2574b9ab1eea3454df78,
+        type: 2}
+      propertyPath: continueButton
+      value: 
+      objectReference: {fileID: 2095081904}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd0385480c3e2574b9ab1eea3454df78, type: 2}
   m_IsPrefabParent: 0
@@ -767,7 +779,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -828,11 +840,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_Font: {fileID: 12800000, guid: 643305ea39b5945d6a190ccc5c636bc7, type: 3}
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -840,7 +852,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Text
+  m_Text: 
 --- !u!114 &1632784803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -862,8 +874,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_Font: {fileID: 12800000, guid: 7ab0566fbe28449208b8c3628f3b77d4, type: 3}
+    m_FontSize: 24
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0

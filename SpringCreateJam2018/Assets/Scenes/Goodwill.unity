@@ -216,7 +216,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -786,11 +786,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_Font: {fileID: 12800000, guid: 643305ea39b5945d6a190ccc5c636bc7, type: 3}
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -798,7 +798,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Text
+  m_Text: 
 --- !u!114 &1436003660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -820,15 +820,15 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_Font: {fileID: 12800000, guid: 7ab0566fbe28449208b8c3628f3b77d4, type: 3}
+    m_FontSize: 24
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 3
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -938,6 +938,11 @@ Prefab:
       propertyPath: diaBox
       value: 
       objectReference: {fileID: 889969306}
+    - target: {fileID: 114812124027295698, guid: dd0385480c3e2574b9ab1eea3454df78,
+        type: 2}
+      propertyPath: continueButton
+      value: 
+      objectReference: {fileID: 816701112}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd0385480c3e2574b9ab1eea3454df78, type: 2}
   m_IsPrefabParent: 0
@@ -1037,14 +1042,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Goodwill
+    name: Lady Godmeer
     sentences:
-    - First Iniated
-    - "Question 1\t"
-    - Question 2
-    - Question 2
-    - Question 2
-    - Question 2
+    - Good evening fellow patron, allow me to introduce myself, Lady Godmeer, wife
+      of the Mayor or London!
+    - "I\u2019ve recently dipped my hands in the real estate business as of late.
+      Purchasing old houses, remodeling, and selling for profits! Although I occasionally
+      will keep a few establishments and run businesses of my own within."
+    - I used to walk nearly every evening near Westminster Abbey and around its lovely
+      gardens. But I understand that Father Mathieus is one of the esteemed preacher
+      of the Abbey....
+    - " I could swear I could hear a child\u2019s scream in the Abbey on several occasions!
+      I fear something sinister is afoot within the Abbey, and I fear it has some
+      connection with the Father!"
 --- !u!114 &1971646619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1111,7 +1121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.303}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
